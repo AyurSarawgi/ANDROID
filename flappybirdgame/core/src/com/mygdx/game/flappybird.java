@@ -11,7 +11,11 @@ public class flappybird extends ApplicationAdapter {
 	Texture background;
 	Texture[] birds;
 	int flapstate=0;
-	
+	float birdY;
+	float gravity= (float) 0.8;
+	float velocity=0;
+	int gamestate=0;
+
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
@@ -19,10 +23,27 @@ public class flappybird extends ApplicationAdapter {
 		birds=new Texture[2];
 		birds[0]= new Texture("bird.png");
 		birds[1]= new Texture("bird2.png");
+		birdY=Gdx.graphics.getHeight()/2-birds[flapstate].getHeight()/2;
 	}
 
 	@Override
 	public void render () {
+
+		if(gamestate==1) {
+			velocity = velocity + gravity;
+
+			birdY -= velocity;
+		}
+
+		if(Gdx.input.justTouched()) {
+
+			Gdx.app.log("Touched", "yep");
+            velocity=-18;
+			gamestate=1;
+
+		}
+
+		
 
 		if (flapstate == 0)
 		{
@@ -31,8 +52,11 @@ public class flappybird extends ApplicationAdapter {
 
 		batch.begin();
 		batch.draw(background, 0,0,Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
-		batch.draw(birds[flapstate], Gdx.graphics.getWidth()/2-birds[flapstate].getWidth()/2, Gdx.graphics.getHeight()/2-birds[flapstate].getHeight()/2);
+		batch.draw(birds[flapstate], Gdx.graphics.getWidth()/2-birds[flapstate].getWidth()/2, birdY);
 		batch.end();
+
+
+
 	}
 
 }
