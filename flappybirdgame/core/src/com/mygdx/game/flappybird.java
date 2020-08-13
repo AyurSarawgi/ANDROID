@@ -116,6 +116,8 @@ public class flappybird extends ApplicationAdapter {
 
 
 		if (birdY <= 0 ) {
+			velocity = 0;
+			gamestate = 0;
 
 		}
 
@@ -151,7 +153,7 @@ public class flappybird extends ApplicationAdapter {
 			bottompiperectangle[i].set(tubeX[i] + 20, -Gdx.graphics.getHeight() / 2 + gap / 2 + tubeoffset[i] + 200, bottompipe.getWidth(), bottompipe.getHeight());
 			//shapeRenderer.rect(tubeX[i] +20, -Gdx.graphics.getHeight() / 2 + gap / 2 + tubeoffset[i]+200,bottompipe.getWidth(),bottompipe.getHeight());
 		}
-		if (Intersector.overlaps(birdcircle, bottompiperectangle[i]) || Intersector.overlaps(birdcircle, toppiperectangle[i])) {
+		if (Intersector.overlaps(birdcircle, bottompiperectangle[i]) || Intersector.overlaps(birdcircle, toppiperectangle[i])|| birdY <= 0 ) {
 			Gdx.app.log("colloide", "yes");
 			batch.draw(toppipe, tubeX[i] + 20, Gdx.graphics.getHeight() / 2 + gap / 2 + tubeoffset[i] + 100);
 			batch.draw(bottompipe, tubeX[i] + 20, -Gdx.graphics.getHeight() / 2 + gap / 2 + tubeoffset[i] + 200);
@@ -167,9 +169,15 @@ public class flappybird extends ApplicationAdapter {
 
 			if(Gdx.input.justTouched())
 			{
+				velocity=-20;
+				birdY =Gdx.graphics.getHeight()/2;
+
 				startgame();
 				gamestate = 1;
 				velocitypipe = 5;
+
+
+
 			}
 
 		}
