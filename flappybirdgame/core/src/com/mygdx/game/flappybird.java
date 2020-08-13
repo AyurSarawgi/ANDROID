@@ -20,7 +20,7 @@ import java.util.Random;
 
 public class flappybird extends ApplicationAdapter {
 	SpriteBatch batch;
-	Texture background, bottompipe, toppipe;
+	Texture background, bottompipe, toppipe,gameover,play,tapplay;
 	Texture[] birds;
 	int flapstate = 0;
 	float birdY;
@@ -36,12 +36,12 @@ public class flappybird extends ApplicationAdapter {
     float distbtwpipes;
     float max= (float) 0.99;
 	float min= (float) -0.99;
-
+    int k=1;
 	Circle birdcircle;
 	Rectangle[] toppiperectangle;
 	Rectangle[] bottompiperectangle;
 
-	ShapeRenderer shapeRenderer;
+	//ShapeRenderer shapeRenderer;
 
 
 	@Override
@@ -52,8 +52,10 @@ public class flappybird extends ApplicationAdapter {
 		birds[0] = new Texture("bird.png");
 		birds[1] = new Texture("bird2.png");
 		birdY = Gdx.graphics.getHeight() / 2 - birds[flapstate].getHeight() / 2;
-
-		bottompipe = new Texture("bottomtube.png");
+        gameover=new Texture("gameover.png");
+		play=new Texture("playbutton.png");
+		tapplay=new Texture("tapplay.png");
+        bottompipe = new Texture("bottomtube.png");
 
 
 		toppipe = new Texture("toptube.png");
@@ -62,39 +64,47 @@ public class flappybird extends ApplicationAdapter {
 
 		toppiperectangle=new Rectangle[numberofpipes];
 		bottompiperectangle=new Rectangle[numberofpipes];
+        startgame();
 
+	birdcircle=new Circle();
+
+	//shapeRenderer=new ShapeRenderer();
+
+
+	}
+
+	public void startgame()
+	{
 		for(int i=0;i<numberofpipes-1;i++)
 		{
 
 
-		tubeX[i]=Gdx.graphics.getWidth() / 2 - toppipe.getWidth() / 2 +i*distbtwpipes*1.2f ;
-		random = new Random();
+			tubeX[i]=Gdx.graphics.getWidth()+200  - toppipe.getWidth() / 2  +i*distbtwpipes*1.2f ;
+			random = new Random();
 
 			tubeoffset[i] = (float) ( Math.random() * (max - min + 1) + min) * (Gdx.graphics.getHeight()/2 - toppipe.getHeight()/2 );
 
 			toppiperectangle[i]=new Rectangle();
 			bottompiperectangle[i]=new Rectangle();
-	}
-	birdcircle=new Circle();
-
-	shapeRenderer=new ShapeRenderer();
-
-
+		}
 	}
 
 	@Override
 	public void render() {
 		batch.begin();
-		batch.draw(background, 0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 
+		batch.draw(background, 0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+		if(k==1)
+		{batch.draw(tapplay, Gdx.graphics.getWidth()/2-150/2, Gdx.graphics.getHeight()/2-400,150,150);}
 		if (gamestate == 1) {
+
 			velocity = velocity + gravity;
 
 			birdY -= velocity;
 		}
 
 		if (Gdx.input.justTouched()) {
-
+			k=0;
 			Gdx.app.log("Touched", "yep");
 			velocity = -20;
 			gamestate = 1;
@@ -122,32 +132,50 @@ public class flappybird extends ApplicationAdapter {
 		//shapeRenderer.circle(birdcircle.x,birdcircle.y,birdcircle.radius);
 
 
-		for(int i=0;i<numberofpipes-1;i++) {
+	for (int i = 0; i < numberofpipes - 1; i++) {
+		if(gamestate==1) {
+			if (tubeX[i] < -toppipe.getWidth()) {
+				tubeoffset[i] = (float) (Math.random() * (max - min + 1) + min) * (Gdx.graphics.getHeight() / 2 - toppipe.getHeight() / 2);
 
-			if(tubeX[i] < -toppipe.getWidth())
-			{tubeoffset[i] = (float) ( Math.random() * (max - min + 1) + min) * (Gdx.graphics.getHeight()/2 - toppipe.getHeight()/2 );
+				tubeX[i] = tubeX[i] + numberofpipes * distbtwpipes - toppipe.getWidth();
+			} else {
+				tubeX[i] -= velocitypipe;
+			}
 
-				tubeX[i]= tubeX[i]+ numberofpipes*distbtwpipes - toppipe.getWidth();
-			}else {tubeX[i]-=velocitypipe;}
+			batch.draw(toppipe, tubeX[i] + 20, Gdx.graphics.getHeight() / 2 + gap / 2 + tubeoffset[i] + 100);
+			batch.draw(bottompipe, tubeX[i] + 20, -Gdx.graphics.getHeight() / 2 + gap / 2 + tubeoffset[i] + 200);
 
-			batch.draw(toppipe, tubeX[i] +20, Gdx.graphics.getHeight() / 2 + gap / 2 + tubeoffset[i]+100);
-			batch.draw(bottompipe, tubeX[i] +20, -Gdx.graphics.getHeight() / 2 + gap / 2 + tubeoffset[i]+200);
-
-			toppiperectangle[i].set(tubeX[i] +20, Gdx.graphics.getHeight() / 2 + gap / 2 + tubeoffset[i]+100,toppipe.getWidth(),toppipe.getHeight());
+			toppiperectangle[i].set(tubeX[i] + 20, Gdx.graphics.getHeight() / 2 + gap / 2 + tubeoffset[i] + 100, toppipe.getWidth(), toppipe.getHeight());
 			//shapeRenderer.rect(tubeX[i] +20, Gdx.graphics.getHeight() / 2 + gap / 2 + tubeoffset[i]+100,toppipe.getWidth(),toppipe.getHeight());
 
-			bottompiperectangle[i].set(tubeX[i] +20, -Gdx.graphics.getHeight() / 2 + gap / 2 + tubeoffset[i]+200,bottompipe.getWidth(),bottompipe.getHeight());
+			bottompiperectangle[i].set(tubeX[i] + 20, -Gdx.graphics.getHeight() / 2 + gap / 2 + tubeoffset[i] + 200, bottompipe.getWidth(), bottompipe.getHeight());
 			//shapeRenderer.rect(tubeX[i] +20, -Gdx.graphics.getHeight() / 2 + gap / 2 + tubeoffset[i]+200,bottompipe.getWidth(),bottompipe.getHeight());
+		}
+		if (Intersector.overlaps(birdcircle, bottompiperectangle[i]) || Intersector.overlaps(birdcircle, toppiperectangle[i])) {
+			Gdx.app.log("colloide", "yes");
+			batch.draw(toppipe, tubeX[i] + 20, Gdx.graphics.getHeight() / 2 + gap / 2 + tubeoffset[i] + 100);
+			batch.draw(bottompipe, tubeX[i] + 20, -Gdx.graphics.getHeight() / 2 + gap / 2 + tubeoffset[i] + 200);
 
-			if(Intersector.overlaps(birdcircle,bottompiperectangle[i])||Intersector.overlaps(birdcircle,toppiperectangle[i]) )
+			batch.draw(gameover, Gdx.graphics.getWidth() / 2 - gameover.getWidth() / 2, Gdx.graphics.getHeight() / 2 - gameover.getHeight() / 2);
+
+			batch.draw(play, Gdx.graphics.getWidth() / 2 - 150 / 2, Gdx.graphics.getHeight() / 2 - gameover.getHeight() + 50, 150, 150);
+
+			gamestate = 0;
+
+			velocitypipe = 0;
+
+
+			if(Gdx.input.justTouched())
 			{
-				Gdx.app.log("colloide", "yes");
-				gamestate = 0;
-				velocitypipe=0;
+				startgame();
+				gamestate = 1;
+				velocitypipe = 5;
 			}
 
 		}
 
+
+}
 			batch.end();
 		//shapeRenderer.end();
 	}
