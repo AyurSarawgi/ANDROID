@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
     String phone,phonenum;
     String OTP;
+    String LoginDetails;
 
 
     @Override
