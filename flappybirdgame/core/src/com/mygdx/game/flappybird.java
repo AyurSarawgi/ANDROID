@@ -37,7 +37,7 @@ public class flappybird extends ApplicationAdapter {
 	int velocitypipe = 5;
 	float[] tubeX=new float[numberofpipes];
     float distbtwpipes;
-    float max= (float) 0.99;
+    float max= (float) 0.999;
 	float min= (float) -0.99;
     int k=1;
     BitmapFont font;
