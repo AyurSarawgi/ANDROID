@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageViewupdate"
+        android:layout_width="120dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="40dp"
+        android:onClick="onClickUpdate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:srcCompat="@drawable/virus" />
+
+    <ImageView
+        android:id="@+id/imageViewquiz"
+        android:layout_width="120dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="68dp"
+        android:onClick="onClickQuiz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageViewvaccinenews"
+        app:layout_constraintTop_toTopOf="@+id/imageViewawarenessvideo"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/coronaquiz" />
+
+    <ImageView
+        android:id="@+id/imageViewawarenessvideo"
+        android:layout_width="120dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="104dp"
+        android:onClick="onClickVideo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewquiz"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageViewupdate"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.951"
+        app:srcCompat="@drawable/socialcare" />
+
+    <ImageView
+        android:id="@+id/imageViewvaccinenews"
+        android:layout_width="120dp"
+        android:layout_height="110dp"
+        android:onClick="onClickVaccine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewupdate"
+        app:layout_constraintTop_toTopOf="@+id/imageViewupdate"
+        app:srcCompat="@drawable/newsreport" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="121dp"
+        android:layout_height="77dp"
+        android:gravity="center"
+        android:text="COVID-19 INDIA CASES "
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/imageViewupdate"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewupdate" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="120dp"
+        android:layout_height="58dp"
+        android:gravity="center"
+        android:text="AWARENESS VIDEO"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/imageViewawarenessvideo"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewawarenessvideo" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="149dp"
+        android:layout_height="72dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:gravity="center"
+        android:text="COVID-19 OFFICIAL INFO"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.877"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewvaccinenews" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="120dp"
+        android:layout_height="58dp"
+        android:gravity="center"
+        android:text="AWARENESS QUIZ"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/imageViewquiz"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewquiz" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:gravity="center"
+        android:text="Corona India Updates"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:fontFamily="@font/architects_daughter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="220dp"
+        android:layout_height="26dp"
+        android:gravity="center"
+        android:text="We Salute Corona Warriors"
+        android:textColor="#686666"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/allura"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

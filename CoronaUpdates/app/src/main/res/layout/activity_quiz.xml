@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvq1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="1. In which country was COVID-19 first reported?"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <RadioGroup
+                android:id="@+id/rg1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/checkBox1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A. America"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/checkBox2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B. Iran"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/checkBox3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C. Italy"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/checkBox4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D. China"
+                    android:textSize="21sp" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvq2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="2. What is COVID-19?"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <RadioGroup
+                android:id="@+id/rg2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/checkBox5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A. Name of the Virus"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/checkBox7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B. Name of the disease"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/checkBox6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C. Name of a drug"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/checkBox8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D. A place in China"
+                    android:textSize="21sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvq3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="3. Which virus causes the disease COVID19?"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <RadioGroup
+                android:id="@+id/rg3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/checkBox11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A. SARS-CoV-2"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/checkBox10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B. SARS"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/checkBox9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C. MERS"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/checkBox12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D. NIPAH"
+                    android:textSize="21sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvq4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="4. How can we make our hands safe?"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <RadioGroup
+                android:id="@+id/rg4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/checkBox14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A. Wash with soap and water"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/checkBox13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B. Wash with plain water"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/checkBox15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C. Wipe hands with tissue paper or cloth"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/checkBox16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D. Wash with soap and water and scrub at least for 20 seconds"
+                    android:textSize="21sp" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvq5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="5. What are the methods to prevent COVID19?"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <RadioGroup
+                android:id="@+id/rg5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/checkBox19"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A. Physical distancing minimum 1 meter"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/checkBox18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B. Handshakes"
+                    android:textSize="21dp" />
+
+                <RadioButton
+                    android:id="@+id/checkBox17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C. Go to crowdy places"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/checkBox20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D. None of the above"
+                    android:textSize="21sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvq6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="6. Who is at a higher risk of developing complications from COVID-19?"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <RadioGroup
+                android:id="@+id/rg6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/checkBox22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A. Elderly above 65 years and above"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/checkBox24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B. People with uncontrolled diabetes"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/checkBox23"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C. People with other Pre-existing diseases"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/checkBox21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D. All the above"
+                    android:textSize="21sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvq7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="7. How does Coronavirus transmit?"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <RadioGroup
+                android:id="@+id/rg7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/checkBox28"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A. Droplets spread - When an infected person sneezes or cough"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/checkBox27"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B. Constant touching of face, eyes or mouth in public place"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/checkBox25"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C. Close contact with a Covid19 infected person"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/checkBox26"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D. All the above"
+                    android:textSize="21sp" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvq8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="8. What are the safe methods of disposal of dead bodies of persons who have died of suspected or confirmed COVID-19"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <RadioGroup
+                android:id="@+id/rg8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/checkBox31"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A. Cremation"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/checkBox32"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B. Burial"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/checkBox29"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C. Both 1 and 2"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/checkBox30"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D. None of the above"
+                    android:textSize="21sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvq9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="9. What are the most common symptoms of COVID-19"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <RadioGroup
+                android:id="@+id/rg9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/checkBox36"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A. Fever"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/checkBox34"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B. Dry cough"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/checkBox33"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C. Tiredness"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/checkBox35"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D. All the above"
+                    android:textSize="21sp" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvq10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="10.Name a clinical trial in which blood is transfused from recovered COVID-19 patients to a coronavirus patient who is in critical condition"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <RadioGroup
+                android:id="@+id/rg10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/checkBox40"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A. Plasma Therapy"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/checkBox38"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B. Solidarity"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/checkBox39"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C. Remdesivir"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/checkBox37"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D. Hydroxychloroquine"
+                    android:textSize="21sp" />
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/buttonresult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onclickgetresult"
+                android:text="get result"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="425dp"
+                android:layout_height="250dp"
+                android:layout_marginRight="10dp"
+                android:alpha="0"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/download" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
