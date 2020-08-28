@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarFadeDuration="100"
+    tools:context=".HomeFragment">
+
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="match_parent"
+        android:background="#EFEFEF"
+        android:focusableInTouchMode="false"
+        android:orientation="vertical"
+        android:scrollbarDefaultDelayBeforeFade="400"
+        android:scrollbarFadeDuration="250">
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+
+
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="105dp"
+                    android:orientation="horizontal">
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="107dp"
+                        android:background="#FFFFFF"
+                        android:overScrollMode="ifContentScrolls"
+                        android:scrollbarDefaultDelayBeforeFade="0"
+                        android:scrollbarFadeDuration="0">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/story1"
+                                    android:layout_width="65dp"
+                                    android:layout_height="60dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginRight="20dp"
+                                    android:src="@drawable/storyone"
+                                    app:civ_border_color="#B4CF08C5"
+                                    app:civ_border_width="4dp"
+                                    app:civ_circle_background_color="#B4CF08C5" />
+
+                                <TextView
+                                    android:id="@+id/tvstoryone"
+                                    android:layout_width="84dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:gravity="center"
+                                    android:shadowColor="#000000"
+                                    android:text="StoryOne"
+                                    android:textColor="#000000"
+                                    android:textSize="18sp" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/story2"
+                                    android:layout_width="65dp"
+                                    android:layout_height="60dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginRight="20dp"
+                                    android:src="@drawable/love"
+                                    app:civ_border_color="#FF000000"
+                                    app:civ_border_width="2dp"
+                                    app:civ_circle_background_color="#DA4C4C" />
+
+                                <TextView
+                                    android:id="@+id/tvstorytwo"
+                                    android:layout_width="84dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:gravity="center"
+                                    android:shadowColor="#000000"
+                                    android:text="StoryTwo"
+                                    android:textColor="#000000"
+                                    android:textSize="18sp" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/story3"
+                                    android:layout_width="65dp"
+                                    android:layout_height="60dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginRight="20dp"
+                                    android:src="@drawable/instagram"
+                                    app:civ_border_color="#FF000000"
+                                    app:civ_border_width="2dp"
+                                    app:civ_circle_background_color="#DA4C4C" />
+
+                                <TextView
+                                    android:id="@+id/tvstorythree"
+                                    android:layout_width="88dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:gravity="center"
+                                    android:shadowColor="#000000"
+                                    android:text="StoryThree"
+                                    android:textColor="#000000"
+                                    android:textSize="18sp" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/story4"
+                                    android:layout_width="65dp"
+                                    android:layout_height="60dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginRight="20dp"
+                                    android:src="@drawable/home"
+                                    app:civ_border_color="#FF000000"
+                                    app:civ_border_width="2dp"
+                                    app:civ_circle_background_color="#DA4C4C" />
+
+                                <TextView
+                                    android:id="@+id/tvstoryfour"
+                                    android:layout_width="84dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:gravity="center"
+                                    android:shadowColor="#000000"
+                                    android:text="StoryFour"
+                                    android:textColor="#000000"
+                                    android:textSize="18sp" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/story5"
+                                    android:layout_width="65dp"
+                                    android:layout_height="60dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginRight="20dp"
+                                    android:src="@drawable/igtv"
+                                    app:civ_border_color="#FF000000"
+                                    app:civ_border_width="2dp"
+                                    app:civ_circle_background_color="#DA4C4C" />
+
+                                <TextView
+                                    android:id="@+id/tvstoryfive"
+                                    android:layout_width="84dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:gravity="center"
+                                    android:shadowColor="#000000"
+                                    android:text="StoryFive"
+                                    android:textColor="#000000"
+                                    android:textSize="18sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/story6"
+                                    android:layout_width="72dp"
+                                    android:layout_height="58dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginRight="20dp"
+                                    android:src="@drawable/user"
+                                    app:civ_border_color="#FF000000"
+                                    app:civ_border_width="2dp"
+                                    app:civ_circle_background_color="#DA4C4C" />
+
+                                <TextView
+                                    android:id="@+id/tvstorysix"
+                                    android:layout_width="84dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:gravity="center"
+                                    android:shadowColor="#000000"
+                                    android:text="StorySix"
+                                    android:textColor="#000000"
+                                    android:textSize="18sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:background="#FFFFFF"
+                    android:orientation="horizontal">
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/post6"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/postsix"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="2dp"
+                        app:civ_circle_background_color="#DA4C4C" />
+
+                    <TextView
+                        android:id="@+id/tvpostsix"
+                        android:layout_width="213dp"
+                        android:layout_height="34dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="100dp"
+                        android:shadowColor="#000000"
+                        android:text="Post Six"
+                        android:textColor="#000000"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/postno6"
+                        android:layout_width="117dp"
+                        android:layout_height="29dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/menu" />
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/postsix"
+                    android:layout_width="match_parent"
+                    android:layout_height="268dp"
+                    android:background="#C6D6C7C7"
+                    android:src="@drawable/postsix" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="2dp"
+                    android:background="#FFFFFF"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:id="@+id/like6"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/love" />
+
+                    <ImageView
+                        android:id="@+id/comment6"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/comment" />
+
+                    <ImageView
+                        android:id="@+id/share6"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/send" />
+
+                    <ImageView
+                        android:id="@+id/isave6"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_marginLeft="270dp"
+                        android:src="@drawable/savebutton" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#FFFFFF"
+                    android:orientation="horizontal">
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/post5"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/postfive"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="2dp"
+                        app:civ_circle_background_color="#DA4C4C" />
+
+                    <TextView
+                        android:id="@+id/tvpostfive"
+                        android:layout_width="213dp"
+                        android:layout_height="34dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="100dp"
+                        android:shadowColor="#000000"
+                        android:text="Post Five"
+                        android:textColor="#000000"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/postno5"
+                        android:layout_width="117dp"
+                        android:layout_height="29dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/menu" />
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/postfive"
+                    android:layout_width="match_parent"
+                    android:layout_height="268dp"
+                    android:background="#86D3C7C7"
+                    android:src="@drawable/postfive" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="2dp"
+                    android:background="#FFFFFF"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:id="@+id/like5"
+                        android:layout_width="35dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/love" />
+
+                    <ImageView
+                        android:id="@+id/comment5"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/comment" />
+
+                    <ImageView
+                        android:id="@+id/share5"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/send" />
+
+                    <ImageView
+                        android:id="@+id/isave5"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_marginLeft="270dp"
+                        android:src="@drawable/savebutton" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#FFFFFF"
+                    android:orientation="horizontal">
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/post4"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/postfour"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="2dp"
+                        app:civ_circle_background_color="#DA4C4C" />
+
+                    <TextView
+                        android:id="@+id/tvpostfour"
+                        android:layout_width="213dp"
+                        android:layout_height="34dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="100dp"
+                        android:shadowColor="#000000"
+                        android:text="Story Four"
+                        android:textColor="#000000"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/postno4"
+                        android:layout_width="117dp"
+                        android:layout_height="29dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/menu" />
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/postfour"
+                    android:layout_width="match_parent"
+                    android:layout_height="268dp"
+                    android:background="#6DBFB8B8"
+                    android:src="@drawable/postfour" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="2dp"
+                    android:background="#FFFFFF"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:id="@+id/like4"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/love" />
+
+                    <ImageView
+                        android:id="@+id/comment4"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/comment" />
+
+                    <ImageView
+                        android:id="@+id/share4"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/send" />
+
+                    <ImageView
+                        android:id="@+id/isave4"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_marginLeft="270dp"
+                        android:src="@drawable/savebutton" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#FFFFFF"
+                    android:orientation="horizontal">
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/post3"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/postthree"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="2dp"
+                        app:civ_circle_background_color="#DA4C4C" />
+
+                    <TextView
+                        android:id="@+id/tvpostthee"
+                        android:layout_width="213dp"
+                        android:layout_height="34dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="100dp"
+                        android:shadowColor="#000000"
+                        android:text="Post Three"
+                        android:textColor="#000000"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/postno3"
+                        android:layout_width="117dp"
+                        android:layout_height="29dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/menu" />
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/postthree"
+                    android:layout_width="match_parent"
+                    android:layout_height="268dp"
+                    android:background="#DDD5C8C8"
+                    android:src="@drawable/postthree" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="2dp"
+                    android:background="#FFFFFF"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:id="@+id/like3"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/love" />
+
+                    <ImageView
+                        android:id="@+id/comment3"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/comment" />
+
+                    <ImageView
+                        android:id="@+id/share3"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/send" />
+
+                    <ImageView
+                        android:id="@+id/isave3"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_marginLeft="270dp"
+                        android:src="@drawable/savebutton" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#FFFFFF"
+                    android:orientation="horizontal">
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/post2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/posttwo"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="2dp"
+                        app:civ_circle_background_color="#DA4C4C" />
+
+                    <TextView
+                        android:id="@+id/tvposttwo"
+                        android:layout_width="213dp"
+                        android:layout_height="34dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="100dp"
+                        android:shadowColor="#000000"
+                        android:text="Post Two"
+                        android:textColor="#000000"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/postno2"
+                        android:layout_width="117dp"
+                        android:layout_height="29dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/menu" />
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/posttwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="268dp"
+                    android:background="#8AD1B9B9"
+                    android:src="@drawable/posttwo" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="2dp"
+                    android:background="#FFFFFF"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:id="@+id/like2"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/love" />
+
+                    <ImageView
+                        android:id="@+id/comment2"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/comment" />
+
+                    <ImageView
+                        android:id="@+id/share2"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/send" />
+
+                    <ImageView
+                        android:id="@+id/isave2"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_marginLeft="270dp"
+                        android:src="@drawable/savebutton" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="3dp"
+            android:background="#939191" />
+
+    </LinearLayout>
+
+</FrameLayout>
